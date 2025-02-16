@@ -27,8 +27,7 @@
     <!-- Scripts -->
     <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap JS (Dropdown functionality) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
 </head>
 <body class="gradient-bg">
@@ -476,34 +475,14 @@
                   </a>
               </div>
           @else
-              <div class="header-tools__item hover-container dropdown">
-                  <a href="{{ Auth::user()->user_type === 'ADM' ? route('admin.index') : route('user.index') }}" 
-                    class="header-tools__item dropdown-toggle" 
-                    id="userDropdown" 
-                    role="button" 
-                    data-bs-toggle="dropdown" 
-                    aria-expanded="false">
-                      <span class="pr-6px">{{ Auth::user()->name }}</span>
+              <div class="header-tools__item ">
+                  <a href="{{ Auth::user()->user_type === 'ADM' ? route('admin.index') : route('user.index')}}" 
+                    class="header-tools__item">
                       <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_user" />
                       </svg>
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                      <li>
-                          <a class="dropdown-item" href="{{ Auth::user()->user_type === 'ADM' ? route('admin.index') : route('user.index') }}">
-                              Dashboard
-                          </a>
-                      </li>
-                      <li>
-                        <form action="{{ route('logout') }}" method="POST" class="d-inline">
-                            @csrf
-                            <button type="submit" class="dropdown-item d-flex align-items-center text-danger">
-                                 Logout
-                            </button>
-                        </form>
-                    </li>
-                  </ul>
               </div>
           @endguest
             
@@ -684,7 +663,7 @@
   
     <div id="scrollTop" class="visually-hidden end-0"></div>
     <div class="page-overlay"></div>
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/plugins/jquery.min.js"></script>
     <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
     <script src="assets/js/plugins/bootstrap-slider.min.js"></script>
