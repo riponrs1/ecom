@@ -455,7 +455,7 @@
                     </div>
                     <div class="main-content">
 
-                        @yield('cpntent')
+                        @yield('content')
 
                         <div class="bottom-page">
                             <div class="body-text">Copyright © 2024 SurfsideMedia</div>
