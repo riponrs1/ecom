@@ -12,17 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="author" content="surfside media" />
-  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/animation.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="font/fonts.css">
-    <link rel="stylesheet" href="icon/style.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/sweetalert.min.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/animation.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-select.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('font/fonts.css')}}">
+    <link rel="stylesheet" href="{{asset('icon/style.css')}}">
+    <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('images/favicon.ico')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/sweetalert.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}">
 
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
 </head>
@@ -40,8 +40,8 @@
                 <div class="section-menu-left">
                     <div class="box-logo">
                         <a href="{{route('admin.index')}}" id="site-logo-inner">
-                            <img class="" id="logo_header" alt="" src="images/logo/logo.png"
-                                data-light="images/logo/logo.png" data-dark="images/logo/logo.png">
+                            <img class="" id="logo_header" alt="" src="{{asset('images/logo/logo.png')}}"
+                                data-light="{{asset('images/logo/logo.png')}}" data-dark="{{asset('images/logo/logo.png')}}">
                         </a>
                         <div class="button-show-hide">
                             <i class="icon-menu-left"></i>
@@ -86,12 +86,12 @@
                                     </a>
                                     <ul class="sub-menu">
                                         <li class="sub-menu-item">
-                                            <a href="add-brand.html" class="">
+                                            <a href="" class="">
                                                 <div class="text">New Brand</div>
                                             </a>
                                         </li>
                                         <li class="sub-menu-item">
-                                            <a href="brands.html" class="">
+                                            <a href="{{route('admin.brands')}}" class="">
                                                 <div class="text">Brands</div>
                                             </a>
                                         </li>
@@ -467,12 +467,12 @@
         </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>   
-    <script src="js/sweetalert.min.js"></script>    
-    <script src="js/apexcharts/apexcharts.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+     <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-select.min.js')}}"></script>   
+    <script src="{{asset('js/sweetalert.min.js')}}"></script>    
+    <script src="{{asset('js/apexcharts/apexcharts.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
     <script>
         (function ($) {
 
